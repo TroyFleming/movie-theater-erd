@@ -1,4 +1,4 @@
-insert into customer_account_tf_final(
+insert into customer_account_tf(
 	customer_id,
 	first_name,
 	last_name,
@@ -7,8 +7,7 @@ insert into customer_account_tf_final(
 	state,
 	zip_code,
 	email,
-	phone_number,
-	billing_info_id
+	phone_number
 )Values(
 	1,
 	'Troy',
@@ -18,11 +17,10 @@ insert into customer_account_tf_final(
 	'IL',
 	'15269',
 	'tgf@gmail.com',
-	'5554445454',
-	1
+	'5554445454'
 );
 
-insert into billing_info_tf_final(
+insert into billing_info_tf(
 	billing_info_id,
 	card_type,
 	card_number,
@@ -44,7 +42,7 @@ insert into billing_info_tf_final(
 	1
 );
 
-insert into movie_info_tf_final(
+insert into movie_info_tf(
 	movie_id,
 	title,
 	run_time_mins,
@@ -58,7 +56,7 @@ insert into movie_info_tf_final(
 	'Action'
 );
 
-insert into theater_info_tf_final(
+insert into theater_info_tf(
 	theater_id,
 	theater_name,
 	theater_address,
@@ -76,7 +74,17 @@ insert into theater_info_tf_final(
 	'9513560956'
 );
 
-insert into ticket_info_tf_final(
+insert into ticket_pricing_tf (
+  ticket_type_id,
+  ticket_type,
+  ticket_price
+)values(
+  1,
+  'Adult',
+  '11.99'
+);
+
+insert into ticket_info_tf(
 	ticket_id,
 	customer_id,
 	theater_id,
@@ -88,7 +96,7 @@ insert into ticket_info_tf_final(
 	1,
 	1,
 	1,
-	'Adult',
+	1,
 	'12/31/2023',
 	'08:30',
 	1
